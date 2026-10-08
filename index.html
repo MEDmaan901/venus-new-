@@ -1,338 +1,812 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="verify-admitad" content="b06c31de78" />
-    <meta name='impact-site-verification' value='1afedb97-f1ea-4bde-aace-ebb0a8ce801a'>
-    
-    <title>Luxury Flower Delivery Dubai | Eternal Roses That Last 1 Year | Venus Fleur</title>
-    <meta name="description" content="Premium luxury flower delivery in Dubai. Order handcrafted eternal rose boxes that last over a year. Same-day delivery to Palm Jumeirah, Downtown, and Dubai Marina.">
-    <meta name="keywords" content="luxury flower delivery dubai, venus fleur dubai, preserved roses dubai, rose box dubai, eternal roses uae">
-    <link rel="canonical" href="https://venusfleur.com/" />
+---------------- package.json ----------------
+{
+  "name": "venus-fleur",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "build:dev": "vite build --mode development",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "overrides": { "rolldown": "1.2.1" },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@radix-ui/react-accordion": "^1.2.12",
+    "@radix-ui/react-alert-dialog": "^1.1.15",
+    "@radix-ui/react-aspect-ratio": "^1.1.8",
+    "@radix-ui/react-avatar": "^1.1.11",
+    "@radix-ui/react-checkbox": "^1.3.3",
+    "@radix-ui/react-collapsible": "^1.1.12",
+    "@radix-ui/react-context-menu": "^2.2.16",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-hover-card": "^1.1.15",
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-menubar": "^1.1.16",
+    "@radix-ui/react-navigation-menu": "^1.2.14",
+    "@radix-ui/react-popover": "^1.1.15",
+    "@radix-ui/react-progress": "^1.1.8",
+    "@radix-ui/react-radio-group": "^1.3.8",
+    "@radix-ui/react-scroll-area": "^1.2.10",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-separator": "^1.1.8",
+    "@radix-ui/react-slider": "^1.3.6",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-switch": "^1.2.6",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "@radix-ui/react-toggle": "^1.1.10",
+    "@radix-ui/react-toggle-group": "^1.1.11",
+    "@radix-ui/react-tooltip": "^1.2.8",
+    "@tailwindcss/vite": "^4.2.1",
+    "@tanstack/react-query": "^5.101.1",
+    "@tanstack/react-router": "1.170.41",
+    "@tanstack/react-start": "1.168.60",
+    "@tanstack/router-plugin": "1.168.42",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.1.1",
+    "date-fns": "^4.1.0",
+    "embla-carousel-react": "^8.6.0",
+    "input-otp": "^1.4.2",
+    "lucide-react": "^0.575.0",
+    "react": "^19.2.0",
+    "react-day-picker": "^9.14.0",
+    "react-dom": "^19.2.0",
+    "react-hook-form": "^7.71.2",
+    "react-resizable-panels": "^4.6.5",
+    "recharts": "^2.15.4",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.1",
+    "tw-animate-css": "^1.3.4",
+    "vaul": "^1.1.2",
+    "vite-tsconfig-paths": "^6.0.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "@lovable.dev/vite-tanstack-config": "2.25.3",
+    "@testing-library/jest-dom": "^6.6.0",
+    "@testing-library/react": "^16.0.0",
+    "@types/node": "^22.16.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^15.15.0",
+    "jsdom": "^20.0.3",
+    "nitro": "3.0.260603-beta",
+    "prettier": "^3.7.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.56.1",
+    "vite": "8.1.5",
+    "vitest": "^4.1.10"
+  }
+}
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Venus Fleur | Luxury Flower Delivery Dubai" />
-    <meta property="og:description" content="Premium preserved roses delivered same-day in Dubai. Handcrafted elegance that lasts over a year." />
-    <meta property="og:image" content="https://venusfleur.com/luxury-flower-delivery-dubai-preserved-roses.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://venusfleur.com/" />
+---------------- vite.config.ts ----------------
+// @lovable.dev/vite-tanstack-config already includes the following — do NOT add them manually
+// or the app will break with duplicate plugins:
+//   - TanStack devtools (dev-only, first), tanstackStart, viteReact, tailwindcss, tsConfigPaths,
+//     nitro (build-only using cloudflare as a default target), VITE_* env injection, @ path alias,
+//     React/TanStack dedupe, error logger plugins, and sandbox detection (port/host/strictPort).
+// You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
+import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-    <meta property="product:price:amount" content="550" />
-    <meta property="product:price:currency" content="AED" />
-    <meta property="og:availability" content="instock" />
+export default defineConfig({
+  tanstackStart: {
+    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
+    // nitro/vite builds from this
+    server: { entry: "server" },
+  },
+});
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Florist",
-      "name": "Venus Fleur Dubai",
-      "image": "https://venusfleur.com/luxury-flower-delivery-dubai-preserved-roses.jpg",
-      "url": "https://venusfleur.com",
-      "telephone": "+971505106523",
-      "priceRange": "AED 550 - AED 2500",
-      "hasMap": "https://www.google.com/maps?cid=5515316483584348490",
-      "sameAs": [
-        "https://www.instagram.com/_venusfleur/",
-        "https://g.page/r/CUrPNVPDSYpMEAI/review"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Business Bay",
-        "addressLocality": "Dubai",
-        "addressRegion": "Dubai",
-        "addressCountry": "AE"
+---------------- tsconfig.json ----------------
+{
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "vite.config.ts",
+    "vitest.config.ts",
+    "eslint.config.js"
+  ],
+  "compilerOptions": {
+    "target": "ES2022",
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["vite/client", "vitest/globals"],
+
+    "moduleResolution": "Bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": false,
+    "noEmit": true,
+
+    "skipLibCheck": true,
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedSideEffectImports": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+
+---------------- src/router.tsx ----------------
+import { QueryClient } from "@tanstack/react-query";
+import { createRouter } from "@tanstack/react-router";
+import { routeTree } from "./routeTree.gen";
+
+export const getRouter = () => {
+  const queryClient = new QueryClient();
+
+  const router = createRouter({
+    routeTree,
+    context: { queryClient },
+    scrollRestoration: true,
+    defaultPreloadStaleTime: 0,
+  });
+
+  return router;
+};
+
+---------------- src/start.ts ----------------
+import { createStart, createCsrfMiddleware, createMiddleware } from "@tanstack/react-start";
+
+import { renderErrorPage } from "./lib/error-page";
+
+const errorMiddleware = createMiddleware().server(async ({ next }) => {
+  try {
+    return await next();
+  } catch (error) {
+    if (error != null && typeof error === "object" && "statusCode" in error) {
+      throw error;
+    }
+    console.error(error);
+    return new Response(renderErrorPage(), {
+      status: 500,
+      headers: { "content-type": "text/html; charset=utf-8" },
+    });
+  }
+});
+
+// Start installs this automatically when src/start.ts is absent; defining the
+// file opts out, so re-add it explicitly to keep server functions protected
+// from cross-site requests.
+const csrfMiddleware = createCsrfMiddleware({
+  filter: (ctx) => ctx.handlerType === "serverFn",
+});
+
+export const startInstance = createStart(() => ({
+  requestMiddleware: [errorMiddleware, csrfMiddleware],
+}));
+
+---------------- src/server.ts ----------------
+import "./lib/error-capture";
+
+import { consumeLastCapturedError } from "./lib/error-capture";
+import { renderErrorPage } from "./lib/error-page";
+
+type ServerEntry = {
+  fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
+};
+
+let serverEntryPromise: Promise<ServerEntry> | undefined;
+
+async function getServerEntry(): Promise<ServerEntry> {
+  if (!serverEntryPromise) {
+    serverEntryPromise = import("@tanstack/react-start/server-entry").then(
+      (m) => (m.default ?? m) as ServerEntry,
+    );
+  }
+  return serverEntryPromise;
+}
+
+async function normalizeCatastrophicSsrResponse(response: Response): Promise<Response> {
+  if (response.status < 500) return response;
+  const contentType = response.headers.get("content-type") ?? "";
+  if (!contentType.includes("application/json")) return response;
+
+  const body = await response.clone().text();
+  if (!isH3SwallowedErrorBody(body)) return response;
+
+  console.error(consumeLastCapturedError() ?? new Error(`h3 swallowed SSR error: ${body}`));
+  return new Response(renderErrorPage(), {
+    status: 500,
+    headers: { "content-type": "text/html; charset=utf-8" },
+  });
+}
+
+function isH3SwallowedErrorBody(body: string): boolean {
+  try {
+    const payload = JSON.parse(body) as { unhandled?: unknown; message?: unknown };
+    return payload.unhandled === true && payload.message === "HTTPError";
+  } catch {
+    return false;
+  }
+}
+
+export default {
+  async fetch(request: Request, env: unknown, ctx: unknown) {
+    try {
+      const handler = await getServerEntry();
+      const response = await handler.fetch(request, env, ctx);
+      return await normalizeCatastrophicSsrResponse(response);
+    } catch (error) {
+      console.error(error);
+      return new Response(renderErrorPage(), {
+        status: 500,
+        headers: { "content-type": "text/html; charset=utf-8" },
+      });
+    }
+  },
+};
+
+---------------- src/routes/index.tsx ----------------
+import { createFileRoute } from "@tanstack/react-router";
+import hero from "@/assets/hero.jpg";
+
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Venus Fleur — Temporarily Paused | Dubai" },
+      {
+        name: "description",
+        content:
+          "Venus Fleur, luxury flowers and floral gifting in Dubai, is taking a short pause. We'll be ready to welcome you back soon.",
       },
-      "areaServed": ["Dubai", "Palm Jumeirah", "Dubai Marina", "Downtown Dubai"]
-    }
-    </script>
+      { property: "og:title", content: "Venus Fleur — Temporarily Paused" },
+      {
+        property: "og:description",
+        content: "Luxury flowers and floral gifting, Dubai. A short pause while we make a few changes behind the scenes.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Index,
+});
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "How long do preserved roses last?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our premium preserved roses are designed to last for over a year (365+ days) without water or maintenance."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Do you offer same-day flower delivery in Dubai?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, Venus Fleur offers guaranteed same-day delivery across Dubai, including Palm Jumeirah and Downtown, for orders placed before 6:00 PM GST."
-        }
-      }]
-    }
-    </script>
+function Index() {
+  return (
+    <main className="relative flex min-h-screen flex-col bg-background text-foreground">
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src={hero}
+          alt="Model in black beside lit candles and a bouquet of deep red roses"
+          className="vf-settle h-full w-full object-cover object-[70%_center]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10 md:bg-gradient-to-r md:from-background md:via-background/70 md:to-transparent" />
+      </div>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@200;300;400;600&display=swap" rel="stylesheet">
+      <header className="relative z-10 flex justify-center px-6 pt-10">
+        <h1 className="font-display text-2xl font-light tracking-[0.42em] md:text-3xl">VENUS FLEUR</h1>
+      </header>
 
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; color: white; scroll-behavior: smooth; overflow-x: hidden; cursor: none; }
-        @media (pointer: coarse) { body { cursor: auto; } #cursor, #cursor-follower { display: none; } }
-        .luxury-serif { font-family: 'Playfair Display', serif; }
-        .gold-gradient { background: linear-gradient(135deg, #c6a75e 0%, #e6c97a 50%, #b8860b 100%); }
-        .glass { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.05); }
-        .site-frame { position: fixed; top: 20px; left: 20px; right: 20px; bottom: 20px; border: 1px solid rgba(198, 167, 94, 0.15); pointer-events: none; z-index: 999; }
-        #cursor { position: fixed; width: 8px; height: 8px; background: #c6a75e; border-radius: 50%; pointer-events: none; z-index: 10000; mix-blend-mode: difference; transition: transform 0.2s ease; }
-        #cursor-follower { position: fixed; width: 40px; height: 40px; border: 1px solid rgba(198, 167, 94, 0.3); border-radius: 50%; pointer-events: none; z-index: 9999; transition: all 0.15s ease-out; }
-        .cursor-active { transform: scale(1.5); background: #c6a75e !important; border: none !important; }
-        .hero-overlay { background: radial-gradient(circle at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%); }
-        .nav-link { letter-spacing: 0.2em; font-size: 9px; text-transform: uppercase; transition: 0.4s; font-weight: 300; }
-        .logo-container { width: 60px; height: 60px; border-radius: 50%; border: 1px solid rgba(198, 167, 94, 0.4); display: flex; align-items: center; justify-content: center; background: #000; color: #c6a75e; font-family: 'Playfair Display', serif; font-weight: bold; font-size: 22px; }
-    </style>
-</head>
-<body>
-
-    <div class="site-frame hidden md:block"></div>
-    <div id="cursor"></div>
-    <div id="cursor-follower"></div>
-
-    <a href="https://www.pinterest.com/venusfleurUAE/" target="_blank" class="fixed bottom-[40px] right-[40px] z-[1000] w-[60px] h-[60px] flex items-center justify-center rounded-full bg-[#E60023] shadow-2xl transition hover:scale-110">
-        <i class="fa-brands fa-pinterest text-white text-3xl"></i>
-    </a>
-
-    <nav class="fixed w-full z-50 px-10 md:px-20 py-8 flex justify-between items-center bg-transparent">
-        <div class="flex items-center space-x-6">
-            <a href="index.html" class="logo-container">VF</a>
-            <div class="hidden lg:flex text-[8px] tracking-[0.4em] text-gray-500 uppercase">Dubai | Premium Florals</div>
+      <section className="vf-fade relative z-10 flex flex-1 items-end px-6 pb-16 pt-24 md:items-center md:px-16 lg:px-24">
+        <div className="max-w-xl">
+          <p className="text-[11px] uppercase tracking-[0.4em] text-accent">Temporarily Paused</p>
+          <div className="mt-6 h-px w-16 bg-accent/60" />
+          <div className="mt-8 space-y-5 font-display text-2xl font-light leading-snug md:text-[2rem]">
+            <p>Venus Fleur is currently taking a short pause while we make a few changes behind the scenes.</p>
+          </div>
+          <div className="mt-6 space-y-3 text-sm leading-7 text-muted-foreground md:text-base">
+            <p>We'll let you know as soon as we're ready to welcome you back.</p>
+            <p>Thank you for your understanding.</p>
+          </div>
+          <p className="mt-10 text-[11px] uppercase tracking-[0.4em] text-foreground/70">Dubai, UAE</p>
         </div>
-        <div class="hidden lg:flex space-x-10">
-            <a href="index.html" class="nav-link text-[#c6a75e]">Home</a>
-            <a href="flower-delivery-dubai.html" class="nav-link">Delivery</a>
-            <a href="luxury-floral-guides.html" class="nav-link">Journal</a>
-            <a href="contact.html" class="nav-link">Contact</a>
+      </section>
+
+      <footer className="relative z-10 border-t border-foreground/15 px-6 py-6 md:px-16 lg:px-24">
+        <div className="flex flex-col items-center justify-between gap-3 text-[11px] uppercase tracking-[0.3em] text-muted-foreground sm:flex-row">
+          <span>Dubai, UAE</span>
+          <nav className="flex gap-10">
+            <a href="https://instagram.com/" target="_blank" rel="noreferrer" className="transition-colors hover:text-accent">Instagram</a>
+            <a href="mailto:hello@venusfleur.com" className="transition-colors hover:text-accent">Contact</a>
+          </nav>
         </div>
-        <a href="https://wa.me/971505106523" target="_blank" class="gold-gradient px-8 py-2.5 text-black text-[9px] font-bold tracking-[0.2em] rounded-sm uppercase">WhatsApp</a>
-    </nav>
+      </footer>
+    </main>
+  );
+}
 
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <img src="luxury-flower-delivery-dubai-preserved-roses.jpg" class="absolute inset-0 w-full h-full object-cover z-0" alt="Luxury Flower Delivery Dubai - Premium Preserved Roses">
-        <div class="absolute inset-0 hero-overlay z-10"></div>
-        <div class="relative z-20 text-center px-6" data-aos="fade-up" data-aos-duration="2000">
-            <div class="inline-flex items-center border border-[#c6a75e]/40 px-5 py-1.5 rounded-full mb-10">
-                <span class="w-1.5 h-1.5 bg-[#c6a75e] rounded-full animate-ping mr-3"></span>
-                <span class="text-[8px] tracking-[0.5em] text-[#c6a75e] font-bold uppercase">SAME-DAY DELIVERY IN DUBAI</span>
-            </div>
-            <h1 class="text-4xl md:text-7xl luxury-serif italic mb-6 leading-tight font-light uppercase tracking-tighter">
-                Luxury Flower Delivery in Dubai
-            </h1>
-            <p class="text-white text-sm md:text-xl font-extralight tracking-[0.4em] uppercase opacity-80 mb-12">A Gift They Will Never Forget</p>
-            <a href="https://wa.me/971505106523" class="gold-gradient px-14 py-5 text-black text-[9px] font-bold tracking-[0.4em] uppercase hover:scale-105 transition duration-500 shadow-2xl">Send a Luxury Gift</a>
+---------------- src/routes/__root.tsx ----------------
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import {
+  Outlet,
+  Link,
+  createRootRouteWithContext,
+  useRouter,
+  HeadContent,
+  Scripts,
+  type ErrorComponentProps,
+} from "@tanstack/react-router";
+import { useEffect, type ReactNode } from "react";
+
+import appCss from "../styles.css?url";
+import { reportLovableError } from "../lib/lovable-error-reporting";
+
+function NotFoundComponent() {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="max-w-md text-center">
+        <h1 className="text-7xl font-bold text-foreground">404</h1>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <p className="mt-2 text-sm text-muted-foreground">
+          The page you're looking for doesn't exist or has been moved.
+        </p>
+        <div className="mt-6">
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Go home
+          </Link>
         </div>
-    </section>
-
-    <!-- GLOBAL DELIVERY -->
-    <section class="relative py-20 px-6 md:px-20 bg-[#0a0a0a] border-y border-[#c6a75e]/10 overflow-hidden" data-aos="fade-up">
-        <div class="max-w-4xl mx-auto text-center">
-            <p class="text-[#c6a75e] text-[9px] tracking-[0.6em] uppercase mb-6 font-bold">Global Delivery</p>
-            <h2 class="luxury-serif italic text-3xl md:text-5xl font-light mb-10 leading-snug text-white">
-                Wherever You Are, <span class="text-[#c6a75e]">We Will Find You.</span>
-            </h2>
-
-            <img
-                src="pro.jpg"
-                width="800"
-                height="500"
-                loading="lazy"
-                class="w-full max-w-2xl mx-auto rounded-2xl object-cover opacity-90 mb-10"
-                alt="Luxury preserved rose gift box, delivered worldwide by Venus Fleur"
-            >
-
-            <p class="text-sm text-white/60 font-light max-w-xl mx-auto mb-10 leading-relaxed">
-                A rose knows no borders. No matter which city holds them, your gesture arrives beautifully, in the shortest time possible — tracked, protected, and exactly as it left our hands.
-            </p>
-            <a href="https://wa.me/971505106523" target="_blank" class="border border-[#c6a75e] text-[#c6a75e] px-10 py-4 font-bold uppercase text-[9px] tracking-[0.4em] inline-block hover:bg-[#c6a75e] hover:text-black transition-all duration-300">
-                Send Now
-            </a>
-        </div>
-    </section>
-
-    <div class="bg-[#0a0a0a] border-y border-white/5 py-12 px-6 md:px-20 flex flex-wrap justify-center gap-12 md:gap-24 text-[9px] tracking-[0.4em] uppercase text-gray-400 font-light" data-aos="fade-up">
-        <div><span class="text-[#c6a75e] mr-2">✦</span> Handcrafted in Dubai</div>
-        <div><span class="text-[#c6a75e] mr-2">✦</span> Preserved Roses Last 1 Year</div>
-        <div><span class="text-[#c6a75e] mr-2">✦</span> VIP Delivery to Palm Jumeirah</div>
+      </div>
     </div>
+  );
+}
 
-    <section class="py-32 px-6 md:px-20 bg-[#050505]">
-        <div class="text-center mb-24" data-aos="fade-up">
-            <p class="text-[#c6a75e] text-xs tracking-[0.6em] uppercase mb-4 font-semibold">The Signature Series</p>
-            <h2 class="text-4xl md:text-6xl luxury-serif italic text-white uppercase">Masterpieces in Bloom</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto">
-            <div class="glass group p-6 rounded-3xl relative" data-aos="fade-up">
-                <div class="absolute top-8 left-8 bg-[#c6a75e] text-black text-[8px] font-black px-4 py-1.5 rounded-sm z-30 tracking-widest shadow-xl uppercase">Eternal Collection</div>
-                <div class="relative overflow-hidden rounded-2xl mb-8">
-                    <img src="white.jpg" class="w-full h-[500px] object-cover group-hover:scale-110 transition duration-1000" alt="Luxury white rose box Dubai delivery - White Elegance">
-                </div>
-                <div class="text-center">
-                    <h3 class="text-2xl luxury-serif italic mb-2 uppercase">White Elegance</h3>
-                    <p class="text-[10px] text-gray-500 tracking-[0.2em] uppercase mb-8">Premium Preserved Rose Collection</p>
-                    <a href="https://wa.me/971505106523" target="_blank" class="block w-full py-4 bg-white/5 hover:bg-white hover:text-black transition uppercase text-[10px] tracking-[0.4em] font-bold border border-white/10 text-center">Order Now</a>
-                </div>
-            </div>
-            <div class="glass group p-6 rounded-3xl relative border-[#c6a75e]/20 shadow-2xl shadow-[#c6a75e]/5" data-aos="fade-up" data-aos-delay="200">
-                <div class="absolute top-8 left-8 bg-[#c6a75e] text-black text-[8px] font-black px-4 py-1.5 rounded-sm z-30 tracking-widest shadow-xl uppercase">Eternal Collection</div>
-                <div class="relative overflow-hidden rounded-2xl mb-8">
-                    <img src="black.jpg" class="w-full h-[500px] object-cover group-hover:scale-110 transition duration-1000" alt="Royal red preserved roses Dubai - Eternal Collection">
-                </div>
-                <div class="text-center">
-                    <h3 class="text-2xl luxury-serif italic mb-2 uppercase">Royal Red</h3>
-                    <p class="text-[10px] text-gray-500 tracking-[0.2em] uppercase mb-8">The Ultimate Romantic Gesture</p>
-                    <a href="https://wa.me/971505106523" target="_blank" class="block w-full py-4 bg-white/5 hover:bg-white hover:text-black transition uppercase text-[10px] tracking-[0.4em] font-bold border border-white/10 text-center">Order Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
+  console.error(error);
+  const router = useRouter();
+  useEffect(() => {
+    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+  }, [error]);
 
-    <section class="py-32 px-6 md:px-20 bg-black border-y border-white/5">
-        <div class="text-center mb-24" data-aos="fade-up">
-            <p class="text-[#c6a75e] text-xs tracking-[0.6em] uppercase mb-4 font-semibold">Curated Collections</p>
-            <h2 class="text-4xl md:text-6xl luxury-serif italic text-white uppercase leading-tight">Gifts for Every Moment</h2>
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+      <div className="max-w-md text-center">
+        <h1 className="text-xl font-semibold tracking-tight text-foreground">
+          This page didn't load
+        </h1>
+        <p className="mt-2 text-sm text-muted-foreground">
+          Something went wrong on our end. You can try refreshing or head back home.
+        </p>
+        <div className="mt-6 flex flex-wrap justify-center gap-2">
+          <button
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
+            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Try again
+          </button>
+          <a
+            href="/"
+            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          >
+            Go home
+          </a>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <a href="wedding-flowers-dubai.html" class="relative group overflow-hidden rounded-3xl h-[500px]" data-aos="fade-up">
-                <img src="luxury-wedding-flowers-dubai.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-1000 opacity-60">
-                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-                <div class="absolute bottom-10 left-10">
-                    <h3 class="text-3xl luxury-serif italic text-white mb-2">Weddings</h3>
-                    <p class="text-[10px] tracking-[0.3em] uppercase text-[#c6a75e]">Bespoke Artistry</p>
-                </div>
-            </a>
-            <a href="anniversary-flowers-dubai.html" class="relative group overflow-hidden rounded-3xl h-[500px]" data-aos="fade-up" data-aos-delay="200">
-                <img src="luxury-preserved-roses-dubai.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-1000 opacity-60">
-                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-                <div class="absolute bottom-10 left-10">
-                    <h3 class="text-3xl luxury-serif italic text-white mb-2">Anniversaries</h3>
-                    <p class="text-[10px] tracking-[0.3em] uppercase text-[#c6a75e]">Eternal Love</p>
-                </div>
-            </a>
-            <a href="birthday-flowers-dubai.html" class="relative group overflow-hidden rounded-3xl h-[500px]" data-aos="fade-up" data-aos-delay="400">
-                <img src="birthday-flower-delivery-dubai.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-1000 opacity-60">
-                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-                <div class="absolute bottom-10 left-10">
-                    <h3 class="text-3xl luxury-serif italic text-white mb-2">Birthdays</h3>
-                    <p class="text-[10px] tracking-[0.3em] uppercase text-[#c6a75e]">Surprise Excellence</p>
-                </div>
-            </a>
-        </div>
-    </section>
+      </div>
+    </div>
+  );
+}
 
-    <!-- NEW JOURNAL SECTION (SEO & LINKING) -->
-    <section class="py-32 px-6 md:px-20 bg-[#050505]">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
-            <div class="w-full md:w-1/2" data-aos="fade-right">
-                <p class="text-[#c6a75e] text-xs tracking-[0.6em] uppercase mb-4">Floral Intelligence</p>
-                <h2 class="text-4xl md:text-5xl luxury-serif italic text-white uppercase leading-tight mb-8">The Definitive Guide to <br> Luxury Gifting in Dubai</h2>
-                <p class="text-gray-400 text-sm leading-relaxed mb-10 max-w-md">
-                    In a city where first impressions are architecture and generosity is currency, discover the unwritten rules of elite gifting culture in the UAE.
-                </p>
-                <a href="best-luxury-gifts-dubai.html" class="inline-block border-b border-[#c6a75e] text-[#c6a75e] text-[10px] font-bold tracking-[0.4em] pb-2 uppercase hover:opacity-70 transition">Read the Full Guide</a>
-            </div>
-            <div class="w-full md:w-1/2" data-aos="fade-left">
-                <a href="best-luxury-gifts-dubai.html" class="block relative group overflow-hidden rounded-3xl h-[400px]">
-                    <img src="luxury-flower-delivery-dubai-preserved-roses.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-1000 opacity-70" alt="Best Luxury Gifts Dubai Guide">
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500"></div>
-                </a>
-            </div>
-        </div>
-    </section>
+export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+  head: () => ({
+    meta: [
+      { charSet: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { title: "Venus Fleur" },
+      { name: "description", content: "Venus Fleur — luxury flowers and floral gifting, Dubai." },
+      { property: "og:title", content: "Venus Fleur" },
+      { property: "og:description", content: "Luxury flowers and floral gifting, Dubai." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Karla:wght@300;400&display=swap",
+      },
+      {
+        rel: "stylesheet",
+        href: appCss,
+      },
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+  }),
+  shellComponent: RootShell,
+  component: RootComponent,
+  notFoundComponent: NotFoundComponent,
+  errorComponent: ErrorComponent,
+});
 
-    <section class="py-32 px-6 md:px-20 bg-black">
-        <div class="max-w-4xl mx-auto text-gray-400 text-sm leading-relaxed" data-aos="fade-up">
-            <h2 class="text-[#c6a75e] luxury-serif italic text-3xl mb-8">Premium Flower Delivery in Dubai</h2>
-            <p class="mb-6">
-                Searching for the most exquisite <strong>luxury flower delivery in Dubai</strong>? Venus Fleur is the city's premier boutique for handcrafted <strong>preserved eternal roses</strong>. Our mission is to transform the art of gifting into a timeless experience. Unlike traditional bouquets that wilt within days, our signature rose boxes are designed to maintain their natural beauty, soft texture, and vibrant color for over a year (365+ days) without the need for water or sunlight.
-            </p>
-            <p class="mb-6">
-                We provide reliable <a href="flower-delivery-dubai.html" class="text-[#c6a75e] underline">same-day flower delivery across Dubai</a>, including prestigious locations such as <strong>Palm Jumeirah, Dubai Marina, Downtown Dubai, and Business Bay</strong>. Whether you are celebrating a milestone anniversary, a romantic birthday, or sending a sophisticated corporate gift to <strong>DIFC</strong>, our floral concierge is at your service.
-            </p>
-        </div>
-    </section>
+function RootShell({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en">
+      <head>
+        <HeadContent />
+      </head>
+      <body>
+        {children}
+        <Scripts />
+      </body>
+    </html>
+  );
+}
 
-    <section class="py-32 px-6 md:px-20 bg-black border-y border-white/5 text-center">
-        <div class="mb-20" data-aos="fade-up">
-            <a href="https://g.page/r/CUrPNVPDSYpMEAI/review" target="_blank" class="group">
-                <div class="flex justify-center items-center space-x-3 mb-6">
-                    <i class="fab fa-google text-white text-xl group-hover:text-[#c6a75e] transition"></i>
-                    <span class="text-[10px] tracking-[0.5em] uppercase text-gray-400 group-hover:text-white transition">Google Rating 5.0/5.0</span>
-                </div>
-                <h2 class="text-3xl luxury-serif italic border-b border-[#c6a75e]/20 inline-block pb-2">Trusted by Dubai's Elite</h2>
-                <p class="text-[9px] text-[#c6a75e] mt-4 tracking-widest uppercase">Click to view all reviews</p>
-            </a>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-7xl mx-auto">
-            <div class="text-center" data-aos="fade-up">
-                <div class="flex justify-center mb-6 text-[#c6a75e] text-[9px] space-x-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="text-white mb-8 text-sm italic font-light leading-relaxed opacity-80">"The most beautiful roses I've ever seen. The packaging is pure luxury."</p>
-                <p class="text-[9px] tracking-[0.4em] text-gray-600 uppercase">— Elena R. <span class="text-green-600 ml-2 font-bold">Verified</span></p>
-            </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-                <div class="flex justify-center mb-6 text-[#c6a75e] text-[9px] space-x-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="text-white mb-8 text-sm italic font-light leading-relaxed opacity-80">"Same-day delivery saved my anniversary! The Royal Red box is stunning."</p>
-                <p class="text-[9px] tracking-[0.4em] text-gray-600 uppercase">— Marc D. <span class="text-green-600 ml-2 font-bold">Verified</span></p>
-            </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                <div class="flex justify-center mb-6 text-[#c6a75e] text-[9px] space-x-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="text-white mb-8 text-sm italic font-light leading-relaxed opacity-80">"Unbeatable quality. My roses still look fresh after 6 months. Amazing service."</p>
-                <p class="text-[9px] tracking-[0.4em] text-gray-600 uppercase">— Layla A. <span class="text-green-600 ml-2 font-bold">Verified</span></p>
-            </div>
-        </div>
-    </section>
+function RootComponent() {
+  const { queryClient } = Route.useRouteContext();
 
-    <section class="py-32 px-6 md:px-20 bg-black border-t border-white/5">
-        <div class="max-w-4xl mx-auto text-gray-400 text-sm leading-relaxed" data-aos="fade-up">
-            <h2 class="text-[#c6a75e] luxury-serif italic text-3xl mb-8">Luxury Gifting for Every Occasion, in Dubai and Beyond</h2>
-            <p class="mb-6">
-                Venus Fleur is Dubai's home for handcrafted <strong>preserved eternal roses</strong> — the kind of gift that lasts long after the moment that inspired it. Planning a wedding? Our <a href="wedding-flowers-dubai.html" class="text-[#c6a75e] underline">luxury wedding flowers</a> collection is built for the scale and detail of Dubai's finest celebrations. Marking a milestone with a partner? Our <a href="anniversary-flowers-dubai.html" class="text-[#c6a75e] underline">anniversary flowers</a> collection is designed for exactly that. And when words alone aren't quite enough, our <a href="apology-gifts-dubai.html" class="text-[#c6a75e] underline">apology gifts</a> collection — from a single rose in a keepsake box to a full <strong>sorry gift</strong> arrangement — helps a sincere gesture land the way it's meant to.
-            </p>
-            <p class="mb-6">
-                Every Venus Fleur box is handcrafted in our Business Bay atelier and offered as a genuine, longer-lasting alternative to a traditional flower delivery service: no water, no wilting, no countdown clock on how long the gesture stays beautiful. We deliver same-day across <strong>Dubai, Palm Jumeirah, Dubai Marina, Downtown Dubai, and DIFC</strong>, <strong>luxury apology gift</strong>, wedding arrangement, or eternal rose box is only ever one message away.
-            </p>
-        </div>
-    </section>
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Outlet />
+    </QueryClientProvider>
+  );
+}
 
-    <footer class="py-32 px-10 md:px-20 bg-black text-center border-t border-white/5">
-        <h2 class="luxury-serif text-3xl tracking-[0.3em] text-[#c6a75e] mb-16 font-light uppercase">Venus Fleur</h2>
-        <div class="flex flex-wrap justify-center gap-12 text-[9px] tracking-[0.4em] text-gray-600 uppercase mb-8">
-            <a href="best-luxury-gifts-dubai.html" class="hover:text-white transition">Gifting Guide</a>
-            <a href="anniversary-flowers-dubai.html" class="hover:text-white transition">Anniversary</a>
-            <a href="wedding-flowers-dubai.html" class="hover:text-white transition">Weddings</a>
-            <a href="birthday-flowers-dubai.html" class="hover:text-white transition">Birthdays</a>
-            <a href="contact.html" class="hover:text-white transition">Contact</a>
-        </div>
-        <p class="text-[8px] tracking-[0.6em] text-gray-800 uppercase font-light">&copy; 2026 Venus Fleur Dubai. All Rights Reserved.</p>
-    </footer>
+---------------- src/styles.css ----------------
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1500, once: true });
-        const cursor = document.getElementById('cursor');
-        const follower = document.getElementById('cursor-follower');
-        let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
-        window.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX; mouseY = e.clientY;
-            cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-        });
-        function animate() {
-            followerX += (mouseX - followerX) * 0.1;
-            followerY += (mouseY - followerY) * 0.1;
-            follower.style.transform = `translate3d(${followerX - 20}px, ${followerY - 20}px, 0)`;
-            requestAnimationFrame(animate);
-        }
-        animate();
-        document.querySelectorAll('a, button').forEach(el => {
-            el.addEventListener('mouseenter', () => { cursor.classList.add('cursor-active'); follower.style.opacity = '0'; });
-            el.addEventListener('mouseleave', () => { cursor.classList.remove('cursor-active'); follower.style.opacity = '1'; });
-        });
-    </script>
-</body>
-</html>
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.129 0.042 264.695);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.129 0.042 264.695);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.129 0.042 264.695);
+  --primary: oklch(0.208 0.042 265.755);
+  --primary-foreground: oklch(0.984 0.003 247.858);
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+  --accent: oklch(0.968 0.007 247.896);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.929 0.013 255.508);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: oklch(0.704 0.04 256.788);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+}
+
+.dark {
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.929 0.013 255.508);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.551 0.027 264.364);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@theme {
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Karla", sans-serif;
+}
+
+/* Venus Fleur: charcoal, ivory, champagne */
+:root {
+  --radius: 0rem;
+  --background: oklch(0.17 0.005 60);
+  --foreground: oklch(0.95 0.015 85);
+  --muted-foreground: oklch(0.78 0.02 80);
+  --accent: oklch(0.78 0.06 80);
+  --accent-foreground: oklch(0.17 0.005 60);
+  --border: oklch(0.95 0.015 85 / 15%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@keyframes vf-fade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes vf-settle { from { transform: scale(1.04); } to { transform: scale(1); } }
+.vf-fade { animation: vf-fade 1.6s ease-out both 0.3s; }
+.vf-settle { animation: vf-settle 3s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .vf-fade, .vf-settle { animation: none; } }
+
+---------------- src/lib/error-page.ts ----------------
+export function renderErrorPage(): string {
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>This page didn't load</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body { font: 15px/1.5 system-ui, -apple-system, sans-serif; background: #fafafa; color: #111; display: grid; place-items: center; min-height: 100vh; margin: 0; padding: 1.5rem; }
+      .card { max-width: 28rem; width: 100%; text-align: center; padding: 2rem; }
+      h1 { font-size: 1.25rem; margin: 0 0 0.5rem; }
+      p { color: #4b5563; margin: 0 0 1.5rem; }
+      .actions { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+      a, button { padding: 0.5rem 1rem; border-radius: 0.375rem; font: inherit; cursor: pointer; text-decoration: none; border: 1px solid transparent; }
+      .primary { background: #111; color: #fff; }
+      .secondary { background: #fff; color: #111; border-color: #d1d5db; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>This page didn't load</h1>
+      <p>Something went wrong on our end. You can try refreshing or head back home.</p>
+      <div class="actions">
+        <button class="primary" onclick="location.reload()">Try again</button>
+        <a class="secondary" href="/">Go home</a>
+      </div>
+    </div>
+  </body>
+</html>`;
+}
+
+---------------- src/lib/error-capture.ts ----------------
+// Captures the original Error out-of-band so server.ts can recover the stack
+// when h3 has already swallowed the throw into a generic 500 Response.
+
+let lastCapturedError: { error: unknown; at: number } | undefined;
+const TTL_MS = 5_000;
+
+function record(error: unknown) {
+  lastCapturedError = { error, at: Date.now() };
+}
+
+// h3's HTTPError serializes to {"status":500,"unhandled":true,"message":"HTTPError"} —
+// no stack, no cause — so a plain console.error(error) reaches the log pipeline with
+// the failure detail stripped. Expand Error-like args into a string that keeps the
+// message, stack, and the full cause chain.
+const CAUSE_DEPTH_LIMIT = 5;
+const DESCRIPTION_LENGTH_LIMIT = 8_000;
+
+export function describeError(error: unknown): string {
+  const parts: string[] = [];
+  let current: unknown = error;
+  for (let depth = 0; depth < CAUSE_DEPTH_LIMIT && current != null; depth++) {
+    if (!(current instanceof Error)) {
+      parts.push(typeof current === "string" ? current : safeStringify(current));
+      break;
+    }
+    const label = depth === 0 ? "" : "caused by: ";
+    const status = describeStatus(current);
+    parts.push(`${label}${current.stack ?? `${current.name}: ${current.message}`}${status}`);
+    current = current.cause;
+  }
+  return parts.join("\n").slice(0, DESCRIPTION_LENGTH_LIMIT);
+}
+
+function describeStatus(error: Error): string {
+  const { status, statusCode } = error as { status?: unknown; statusCode?: unknown };
+  const value = status ?? statusCode;
+  return typeof value === "number" ? ` (status ${value})` : "";
+}
+
+function safeStringify(value: unknown): string {
+  try {
+    return JSON.stringify(value) ?? String(value);
+  } catch {
+    return String(value);
+  }
+}
+
+function isErrorLike(value: unknown): value is Error {
+  return value instanceof Error;
+}
+
+// Wrap console.error so errors logged by any layer — including h3's internal
+// unhandled-error logging, which this file cannot hook directly — are both
+// recorded for consumeLastCapturedError and expanded before serialization.
+const originalConsoleError = console.error.bind(console);
+console.error = (...args: unknown[]) => {
+  const expanded = args.map((arg) => {
+    if (!isErrorLike(arg)) return arg;
+    record(arg);
+    return describeError(arg);
+  });
+  originalConsoleError(...expanded);
+};
+
+if (typeof globalThis.addEventListener === "function") {
+  globalThis.addEventListener("error", (event) => record((event as ErrorEvent).error ?? event));
+  globalThis.addEventListener("unhandledrejection", (event) =>
+    record((event as PromiseRejectionEvent).reason),
+  );
+}
+
+export function consumeLastCapturedError(): unknown {
+  if (!lastCapturedError) return undefined;
+  if (Date.now() - lastCapturedError.at > TTL_MS) {
+    lastCapturedError = undefined;
+    return undefined;
+  }
+  const { error } = lastCapturedError;
+  lastCapturedError = undefined;
+  return error;
+}
+
+---------------- src/lib/lovable-error-reporting.ts ----------------
+type LovableErrorOptions = {
+  mechanism?: "manual" | "onerror" | "unhandledrejection" | "react_error_boundary";
+  handled?: boolean;
+  severity?: "error" | "warning" | "info";
+};
+
+type LovableEvents = {
+  track?: (event: string, properties?: Record<string, unknown>) => string | null;
+  captureException?: (
+    error: unknown,
+    context?: Record<string, unknown>,
+    options?: LovableErrorOptions,
+  ) => void;
+};
+
+declare global {
+  interface Window {
+    __lovableEvents?: LovableEvents;
+    __lovableReportRuntimeError?: (payload: {
+      message: string;
+      stack?: string;
+      filename?: string;
+    }) => void;
+  }
+}
+
+export function reportLovableError(error: unknown, context: Record<string, unknown> = {}) {
+  if (typeof window === "undefined") return;
+  window.__lovableEvents?.captureException?.(
+    error,
+    {
+      source: "react_error_boundary",
+      route: window.location.pathname,
+      ...context,
+    },
+    {
+      mechanism: "react_error_boundary",
+      handled: false,
+      severity: "error",
+    },
+  );
+  // Prod React does not rethrow boundary-caught errors to window.onerror, so the
+  // editor's telemetry never sees them. Forward to lovable.js's reporting hook,
+  // which is present only inside the editor preview.
+  const stack = error instanceof Error ? error.stack : undefined;
+  window.__lovableReportRuntimeError?.({
+    message: describeThrown(error),
+    ...(stack !== undefined && { stack }),
+    filename: window.location.pathname,
+  });
+}
+
+const MAX_SERIALIZED_LENGTH = 2000;
+
+// Loaders and server fns throw raw Responses and plain objects (a Supabase
+// `{ message, code, details }`), which String() reduces to "[object ...]".
+function describeThrown(error: unknown): string {
+  if (error instanceof Response) {
+    return `Response ${error.status}${error.url ? ` at ${error.url}` : ""}`;
+  }
+  if (error instanceof Error) return error.message;
+  if (typeof error === "string") return error;
+  const { message } = (error ?? {}) as { message?: unknown };
+  if (typeof message === "string" && message.length > 0) return message;
+  try {
+    return JSON.stringify(error)?.slice(0, MAX_SERIALIZED_LENGTH) ?? String(error);
+  } catch {
+    return String(error);
+  }
+}
+
+---------------- src/lib/utils.ts ----------------
+import { clsx, type ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
